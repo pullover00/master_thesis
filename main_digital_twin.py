@@ -1,9 +1,10 @@
-import Measurement
+#import Measurements
 import Object_detection
-import Segmentation
+#import Segmentation
 import Images
 
+image_path = Images.import_image(random=True)
+bbox, scores, classes = Object_detection.detect_rings(image_path)
 
-image = import_image(random=True, test=True)
 
-structure_segment, structure_type = segment_structure(image)
+# structure_segment, structure_type = segment_structure(image)
