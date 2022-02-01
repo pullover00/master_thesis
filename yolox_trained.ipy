@@ -1,0 +1,15 @@
+import YOLOX, os
+import sys
+from tools import demo
+import argparse
+import main_digital_twin
+
+if __name__ == '__main__':
+
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--image_path', type=str, required=True)
+    # args = parser.parse_args()
+    
+    PATH = main_digital_twin.image_path
+    !python YOLOX/tools/demo_modified.py image -f YOLOX\exps\example\yolox_voc\yolox_voc_s.py -c best_ckpt.pth.tar --path {PATH} --save_result --conf 0.75 --nms 0.45 --tsize 640 --device cpu
+    
